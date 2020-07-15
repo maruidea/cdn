@@ -33,7 +33,7 @@ function initMap() {
 
 function initInfoWindow() {
   var contentString = '<div class="card" style="width: 18rem;">' +
-      '<img src="https://source.unsplash.com/200x150/?warehouse" class="card-img-top" alt="...">' +
+      '<img src="https://source.unsplash.com/200x75/?warehouse" class="card-img-top" alt="...">' +
       '<div class="card-body">' +
         '<h6 class="card-title">Gudang</h6>' +
         '<p class="card-text">Tempat untuk menyimpan barang</p>' +
