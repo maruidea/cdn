@@ -2,6 +2,11 @@
   height: 600px;
 }
 
+#poi-list {
+  height: 600px;
+  overflow: auto;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   --overflow:auto;

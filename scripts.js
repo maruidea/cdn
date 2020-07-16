@@ -225,4 +225,15 @@ $(document).ready(function () {
     });
     clusters[2].repaint();
   });
+
+  $("#poi-list a").on("click", function (event) {
+    var targetMarker = clusters[0].getMarkers()[Math.round(Math.random() * 30)];
+    map.panTo(targetMarker.getPosition());
+    google.maps.event.addListenerOnce(map, "idle", function () {
+      map.setZoom(8);
+      google.maps.event.addListenerOnce(map, "idle", function () {
+        infoWindow.open(map, targetMarker);
+      });
+    });
+  });
 });
