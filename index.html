@@ -1,93 +1,136 @@
 <html>
-  <head>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<head>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!-- Tags Input -->
-    <link rel="stylesheet" href="https://rawcdn.githack.com/Nodws/bootstrap4-tagsinput/6558e8fcdae8585363d2be01cf1ec461db4c4f88/tagsinput.css" crossorigin="anonymous">
-    <script src="https://rawcdn.githack.com/Nodws/bootstrap4-tagsinput/6558e8fcdae8585363d2be01cf1ec461db4c4f88/tagsinput.js" crossorigin="anonymous"></script>
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-10">
-          <div id="map"></div>
+  <!-- Tags Input -->
+  <link rel="stylesheet"
+    href="https://rawcdn.githack.com/Nodws/bootstrap4-tagsinput/6558e8fcdae8585363d2be01cf1ec461db4c4f88/tagsinput.css"
+    crossorigin="anonymous">
+  <script
+    src="https://rawcdn.githack.com/Nodws/bootstrap4-tagsinput/6558e8fcdae8585363d2be01cf1ec461db4c4f88/tagsinput.js"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10">
+        <div id="map"></div>
+      </div>
+      <div class="col-2">
+        <div>
+          list
         </div>
-        <div class="col-2">
-          <div>
-            list
-          </div>
-          <div>
-            list
-          </div>
-          <div>
-            list
-          </div>
-          <div>
-            list
-          </div>
-          <div>
-            list
-          </div>
+        <div>
+          list
+        </div>
+        <div>
+          list
+        </div>
+        <div>
+          list
+        </div>
+        <div>
+          list
         </div>
       </div>
-      <div class="row py-2">
-        <div class="col-12">
-          <div>
-            <button id="marker1" type="button" class="btn btn-outline-primary active" data-toggle="button" aria-pressed="true">
-              <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/1s.png"/>
-            </button>
-            <button id="marker2" type="button" class="btn btn-outline-primary active" data-toggle="button" aria-pressed="true">
-              <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/2s.png"/>
-            </button>
-            <button id="marker3" type="button" class="btn btn-outline-primary active" data-toggle="button" aria-pressed="true">
-              <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/3s.png"/>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>
-            Opsi untuk gudang
-          </h5>
-          <form>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-              <label class="form-check-label" for="inlineRadio1">Mengandung semua item</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">Mengandung salah satu item</label>
-            </div>
-            <div class="row">
-              <div class="col-10">
-                <input type="text" class="form-control" aria-label="Item" data-role="tagsinput" value="ammo,tank,anoa">
-              </div>
-              <div class="col-2">
-                <button type="submit" class="btn btn-primary">Filter</button>
-              </div>
-            </div>
-          </form>
-          <div class="row pb-5">
+    </div>
+    <div class="row pt-2">
+      <div class="col-10">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Nama atau lokasi"
+            aria-label="Nama atau nama tempat / lokasi" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">Cari</span>
           </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-10">
+        <div>
+          <button id="marker1" type="button" class="btn btn-outline-primary active" data-toggle="button"
+            aria-pressed="true">
+            <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/1s.png" />
+          </button>
+          <button id="marker2" type="button" class="btn btn-outline-primary active" data-toggle="button"
+            aria-pressed="true">
+            <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/2s.png" />
+          </button>
+          <button id="marker3" type="button" class="btn btn-outline-primary active" data-toggle="button"
+            aria-pressed="true">
+            <img src="https://raw.githubusercontent.com/maruidea/cdn/master/marker-icon/3s.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-10">
+        <h5>
+          Opsi tambahan untuk gudang
+        </h5>
+        <form class="mt-4">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+              checked>
+            <label class="form-check-label" for="inlineRadio1">Mengandung semua barang</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Mengandung salah satu barang</label>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" aria-label="Item" data-role="tagsinput" value="ammo,tank,anoa">
+            </div>
+          </div>
+        </form>
+        <form class="form-inline mt-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">
+              Jumlah barang
+            </label>
+          </div>
+          <select class="form-control ml-2" id="exampleFormControlSelect1">
+            <option>lebih dari</option>
+            <option>sama dengan</option>
+            <option>kurang dari</option>
+          </select>
+          <input type="number" class="form-control ml-2 text-right" aria-label="qty" value="0">
+        </form>
+        <button type="submit" class="btn btn-primary mt-4 float-right">Terapkan</button>
+        <div class="row pb-5">
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://googlemaps.github.io/v3-utility-library/packages/markerclustererplus/dist/markerclustererplus.min.js"></script>
-    <!-- Replace the value of the key parameter with your own API key. -->
-    <script async defer
+  <script
+    src="https://googlemaps.github.io/v3-utility-library/packages/markerclustererplus/dist/markerclustererplus.min.js"></script>
+  <!-- Replace the value of the key parameter with your own API key. -->
+  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqI2xAcB_2tmxwwUQIdPoVTyomlTSFpVg&callback=initMap">
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  </body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+
 </html>
