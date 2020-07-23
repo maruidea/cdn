@@ -40,11 +40,13 @@ html, body {
 }
 
 .custom-clustericon::before {
-  padding: 7px;
+  width: 48px;
+  height: 48px;
 }
 
 .custom-clustericon::after {
-  padding: 14px;
+  width: 64px;
+  height: 64px;
 }
 
 .custom-clustericon-1 {
